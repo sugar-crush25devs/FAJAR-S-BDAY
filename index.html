@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Fajar 🎀</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #f5a6c7;
+  --deep: #c44f83;
+  --light: #fff3f8;
+  --cream: #fffafc;
+  --ink: #714052;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at top left, #ffe0ed, transparent 55%),
+    radial-gradient(ellipse at bottom right, #fbd8e8, transparent 55%),
+    #fff7fa;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "♡";
+  position: fixed;
+  top: 7%;
+  left: 5%;
+  color: #f3b1cf;
+  font-size: 90px;
+  opacity: .3;
+  transform: rotate(-20deg);
+  pointer-events: none;
+}
+
+body::after {
+  content: "✧";
+  position: fixed;
+  right: 7%;
+  bottom: 8%;
+  color: #d987ae;
+  font-size: 100px;
+  opacity: .3;
+  pointer-events: none;
+}
+
+main {
+  width: min(100% - 28px, 680px);
+  margin: auto;
+  padding: 25px 0 45px;
+}
+
+.topline {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #b96a8c;
+  margin: 10px 0 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 30px 14px 22px;
+  position: relative;
+}
+
+.bow {
+  font-size: 47px;
+  display: block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #bd6a90;
+  margin-top: 16px;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(76px, 18vw, 112px);
+  font-weight: 400;
+  color: #d65f96;
+  line-height: 1.05;
+  margin: 8px 0 5px;
+  text-shadow: 2px 4px 0 #ffffff;
+}
+
+.subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.7;
+  color: #956077;
+}
+
+.card {
+  background: rgba(255,255,255,.77);
+  border: 1px solid #f4c9dc;
+  border-radius: 27px;
+  padding: 25px 18px;
+  margin: 17px 0;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(195, 92, 138, .09);
+  backdrop-filter: blur(10px);
+}
+
+.section-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #b86b8d;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.timebox {
+  background: #fff0f6;
+  border: 1px solid #f7d5e4;
+  border-radius: 16px;
+  padding: 17px 3px 13px;
+}
+
+.number {
+  font-size: clamp(25px, 7vw, 37px);
+  color: #c65083;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.unit {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin-top: 5px;
+  color: #a7778e;
+}
+
+.small-note {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #a4778a;
+  margin-top: 19px;
+}
+
+.divider {
+  color: #d987ae;
+  letter-spacing: 8px;
+  margin: 22px 0;
+}
+
+.letter {
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #80566a;
+}
+
+.letter p { margin: 13px 0; }
+
+.letter .dear {
+  font-family: 'Great Vibes', cursive;
+  font-size: 39px;
+  color: #cb568b;
+  line-height: 1.5;
+}
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  color: #cb568b;
+  text-align: right;
+  margin-top: 20px;
+}
+
+button {
+  border: 0;
+  background: linear-gradient(135deg, #e984b1, #c95189);
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: .4px;
+  padding: 15px 23px;
+  border-radius: 50px;
+  box-shadow: 0 7px 18px #d96f9b42;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px #d96f9b55;
+}
+
+#letterContent {
+  display: none;
+  animation: appear .8s ease both;
+}
+
+#letterContent.show { display: block; }
+
+.footer {
+  text-align: center;
+  font-size: 11px;
+  color: #b08096;
+  padding: 22px 0 5px;
+  line-height: 2;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  z-index: 10;
+  animation: rise linear forwards;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0) rotate(-5deg); }
+  50% { transform: translateY(-9px) rotate(5deg); }
+}
+
+@keyframes rise {
+  to { transform: translateY(-110vh) rotate(45deg); opacity: 0; }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 380px) {
+  main { width: calc(100% - 20px); }
+  .countdown { gap: 5px; }
+  .timebox { padding: 14px 1px 11px; }
+  .unit { letter-spacing: .7px; font-size: 8px; }
+  .card { padding: 22px 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<main>
+  <div class="topline">A little surprise, made with love</div>
+
+  <section class="hero">
+    <span class="bow">🎀</span>
+    <div class="eyebrow">To my forever school bestie</div>
+    <h1>Fajar</h1>
+    <div class="subtitle">
+      Some friendships make ordinary days<br>
+      feel like the prettiest memories. ♡
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="section-label" id="countdownTitle">
+      A little countdown to your special day
+    </div>
+
+    <div class="countdown" id="countdown">
+      <div class="timebox">
+        <div class="number" id="days">00</div>
+        <div class="unit">Days</div>
+      </div>
+      <div class="timebox">
+        <div class="number" id="hours">00</div>
+        <div class="unit">Hours</div>
+      </div>
+      <div class="timebox">
+        <div class="number" id="minutes">00</div>
+        <div class="unit">Minutes</div>
+      </div>
+      <div class="timebox">
+        <div class="number" id="seconds">00</div>
+        <div class="unit">Seconds</div>
+      </div>
+    </div>
+
+    <div class="small-note" id="countdownNote">
+      The world is getting ready to celebrate YOU. 🌷
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="section-label">A little something for you</div>
+    <div class="divider">♡ ✧ ♡</div>
+
+    <p style="font-family:'Playfair Display',serif;font-size:19px;line-height:1.8;">
+      For the girl who became<br>
+      a beautiful part of my school memories.
+    </p>
+
+    <p class="small-note">
+      There are some people you meet at school<br>
+      and somehow, they become more than just classmates.
+    </p>
+
+    <button id="letterButton" onclick="openLetter()">
+      Open your little birthday letter 💌
+    </button>
+
+    <div id="letterContent">
+      <div class="divider">୨୧ ─── ♡ ─── ୨୧</div>
+
+      <div class="letter">
+        <div class="dear">My dearest Fajar, ♡</div>
+
+        <p>
+          Happiest birthday in advance to one of the sweetest
+          parts of my school life! 🎂🎀
+        </p>
+
+        <p>
+          Sometimes life gets so busy that days pass before we
+          even realise how much time has gone by. I know I haven't
+          been able to talk to you as much lately, but that doesn't
+          mean you're any less special to me.
+        </p>
+
+        <p>
+          I'm so grateful that our paths crossed at school.
+          The memories, the little moments, the laughter, and
+          all the things that made those days special will always
+          have a place in my heart.
+        </p>
+
+        <p>
+          On your birthday, I wish you a life full of happiness,
+          peace, beautiful surprises, genuine people, and dreams
+          that come true one by one. May this new chapter bring
+          you countless reasons to smile and moments you'll
+          remember forever.
+        </p>
+
+        <p>
+          No matter how busy life gets or how much things change,
+          I hope you always know that you are appreciated and
+          deserve so much goodness in this world.
+        </p>
+
+        <p>
+          Keep being your lovely self, keep shining, and never
+          forget how precious your presence can be in someone's
+          life. Today is all about celebrating YOU. ♡
+        </p>
+
+        <p>
+          Happy birthday, my school bestie.
+          Here's to more memories, more laughter, and a friendship
+          that will always mean something beautiful to me. 🌷
+        </p>
+
+        <p style="text-align:center;color:#cb568b;">
+          𐙚 With lots of love & pink wishes 𐙚
+        </p>
+
+        <div class="signature">Your school bestie ♡</div>
+      </div>
+
+      <button onclick="sprinkleHearts()" style="display:block;margin:25px auto 0;">
+        Send yourself some love ✨
+      </button>
+    </div>
+  </section>
+
+  <div class="footer">
+    Made with ♡, just for Fajar<br>
+    A tiny website for a very special person 🎀
+  </div>
+</main>
+
+<script>
+// Fajar's birthday: October 26, 2026.
+// Months in JavaScript start at 0, so October is 9.
+const birthday = new Date(2026, 9, 26, 0, 0, 0);
+
+function updateCountdown() {
+  const now = new Date();
+  const difference = birthday.getTime() - now.getTime();
+
+  if (difference <= 0) {
+    document.getElementById('countdownTitle').textContent =
+      "IT'S YOUR SPECIAL DAY, FAJAR! ♡";
+
+    document.getElementById('countdown').innerHTML = `
+      <div style="grid-column:1/-1;padding:12px;">
+        <div style="font-size:42px;">🎂🎀💗</div>
+        <div style="font-family:'Great Vibes',cursive;font-size:44px;color:#c65083;margin:12px 0;">
+          Happy Birthday!
+        </div>
+        <div style="font-size:14px;line-height:1.9;">
+          Today, the world celebrates you.<br>
+          May your day be as lovely as your heart. ♡
+        </div>
+      </div>`;
+
+    document.getElementById('countdownNote').textContent =
+      "Your new chapter starts today. Make it beautiful! 🌷";
+    return;
+  }
+
+  const days = Math.floor(difference / 86400000);
+  const hours = Math.floor((difference % 86400000) / 3600000);
+  const minutes = Math.floor((difference % 3600000) / 60000);
+  const seconds = Math.floor((difference % 60000) / 1000);
+
+  document.getElementById('days').textContent = String(days).padStart(2,'0');
+  document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+  document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
+  document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
+}
+
+function openLetter() {
+  const letter = document.getElementById('letterContent');
+  letter.classList.add('show');
+  document.getElementById('letterButton').textContent =
+    'Your letter is open, birthday girl ♡';
+  document.getElementById('letterButton').disabled = true;
+  sprinkleHearts();
+  setTimeout(() => letter.scrollIntoView({
+    behavior: 'smooth', block: 'start'
+  }), 100);
+}
+
+function sprinkleHearts() {
+  const symbols = ['♡','♥','🎀','✧','💗','🌸'];
+
+  for (let i = 0; i < 22; i++) {
+    const heart = document.createElement('span');
+    heart.className = 'heart';
+    heart.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+    heart.style.left = Math.random()*100 + 'vw';
+    heart.style.fontSize = (15 + Math.random()*19) + 'px';
+    heart.style.animationDuration = (3 + Math.random()*4) + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 7500);
+  }
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// A few subtle floating hearts appear in the background.
+setInterval(() => {
+  const heart = document.createElement('span');
+  heart.className = 'heart';
+  heart.textContent = ['♡','♥','✧'][Math.floor(Math.random()*3)];
+  heart.style.left = Math.random()*100 + 'vw';
+  heart.style.fontSize = (13 + Math.random()*12) + 'px';
+  heart.style.opacity = '.55';
+  heart.style.animationDuration = (7 + Math.random()*5) + 's';
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 12500);
+}, 1300);
+</script>
+</body>
+</html>
